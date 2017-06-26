@@ -1,0 +1,35 @@
+﻿@charset "utf-8";
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{
+ 	margin: 0;
+ 	padding:0;
+}
+body,button,input,select,textarea{
+	font: 16px/1.5 tahoma,arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{/*响应式字体*/
+	font-size: 100%;
+}
+/*清楚浮动*/
+
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+.clearfix{
+	*zoom: 1;
+}
+img{
+	display: block;
+	min-width: 100%;
+	height: auto;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: black;
+}

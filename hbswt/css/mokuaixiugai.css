@@ -1,0 +1,289 @@
+﻿@charset "utf-8";
+body,button,input,select,textarea{
+	font-family: sans-serif;
+	font-size: 14px;
+}
+header nav,section{
+	width: 1200px;
+	margin: 0 auto;
+}
+/***********************************************************************************************************************/
+/***********************************************************************************************************************/
+/*****************************************************网页头部**********************************************************/
+header{
+	width: 100%;
+	height: 48px;
+	background-color: #333;
+	border-bottom: 1px solid #ccc;
+}
+header nav ul:nth-of-type(1),header nav ul li{
+	float: left;
+}
+header nav ul:nth-of-type(2){
+	float: right;
+}
+header nav ul li a{
+	color: #fff;
+	font-size: 12px;
+	line-height: 48px;
+	padding: 0 10px;
+	border-left: 1px solid #ccc;
+}
+header nav ul li:nth-of-type(1) a,header nav ul:nth-of-type(2) li:nth-of-type(2) a{
+	border-left: none;
+}
+header nav ul li:nth-of-type(1) a{
+	color: #96ccff;
+	padding-left: 0;
+}
+header nav ul:nth-of-type(2) li:nth-of-type(1) a{
+	padding: 0 38px 0 7px;
+}
+header nav ul:nth-of-type(2) li i{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/sprites.png) 0 0;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+header nav ul li a:hover{
+	color: #96ccff;
+}
+header nav ul li:nth-of-type(1) a:hover{
+	color: #fff;
+}
+
+/***********************************************************************************************************************/
+/***********************************************************************************************************************/
+/*****************************************************网页主体**********************************************************/
+section aside,section article nav dl dd,section article ul li,section article .content nav ul li,section article .content table	{
+	float:left;
+}
+section article{
+	float: right;
+}
+section{	
+	padding-bottom: 140px;
+}
+
+/**************************************************网页主体-侧边栏*******************************************************/
+section aside{
+	width: 236px;
+	height: 860px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	background-color: #f0f0f0;
+}
+section aside div{
+	color: #1a1a1a;
+	line-height: 32px;
+	padding: 21px 0 41px 33px;
+	box-sizing: border-box;
+}
+section aside div a{	
+	display: block;
+	border: 3px solid #ccc;
+	margin: 0 0 10px 23px;
+}
+section aside div a,section aside div a img{
+	width: 118px;
+	height: 118px;
+	border-radius: 50%;
+}
+section aside div p:nth-of-type(2){
+	color: #278ad6;
+}
+section aside div p:nth-of-type(4){
+	margin-bottom: 12px;
+}
+section aside div button{
+	width: 140px;
+	height: 36px;
+	color: #fff;
+	background-color: #278ad6;
+	border: 0 none;
+	border-radius: 2px;
+	margin-left: 14px;
+	cursor: pointer;
+	outline-style: none;
+}
+section aside dl dd{
+	width: 200px;
+	height: 51px;
+	color: #252525;
+	line-height: 50px;
+	margin-left: 18px;
+	padding-left: 78px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #d9d9d9;
+	box-shadow: 0 1px 0 0 #fff;
+	background-image: url(../img/sprites.png);
+	background-repeat: no-repeat;
+}
+section aside dl dd:nth-of-type(1){
+	background-position: 48px -292px;
+}
+section aside dl dd:nth-of-type(2){
+	background-position: 47px -375px;
+}
+section aside dl dd:nth-of-type(3){
+	width: 237px;
+	margin-left: 0;
+	padding-left: 96px;
+	background-color: #fff;
+	box-shadow: 0 1px 1px 0 #cdcccc;
+	background-position: 64px -475px;
+}
+section aside dl dd:nth-of-type(4){
+	background-position: 47px -575px;
+}
+/**************************************************网页主体-内容栏*******************************************************/
+section article{
+	width: 940px;
+	padding-top:20px;
+}
+section article>nav{
+	height: 34px;
+	background-color: #278ad6;
+	line-height: 34px;
+	padding-left: 3px;
+	margin-bottom: 26px;
+}
+section article>nav dl dd a{
+	display: block;
+	color: #fff;
+	padding: 0 7px 0 13px;
+}
+section article>nav dl dd a:hover{
+	color: #96ccff;
+}
+section article>nav dl dd a:after{
+	content: ">";
+	width: 6px;
+	display: inline-block;
+	color: #fff;
+	transform: translateX(9px);
+}
+section article>nav dl dd:nth-of-type(3) a:after{
+	content: "";
+}
+section article .content{
+	height: 420px;
+	background-color: #f5f5f5;
+	font-size: 16px;
+}
+section article .content nav{
+	height: 24px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #d9d9d9;
+	padding-left: 53px;
+}
+section article .content nav ul{
+	margin-top: -6px;
+}
+section article .content nav ul li{
+	width: 90px;
+	height: 30px;
+	color: #fff;
+	text-align: center;
+	line-height: 18px;
+	background-color: #f9a245;
+	margin: 0 12px;
+}
+section article .content nav ul li:before{
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 6px solid transparent;
+	border-right: 3px solid #c77014;
+	transform: translateX(-3px);
+}
+section article .content nav ul li:nth-of-type(2){
+	background-color: #f4bb7d;
+}
+section article .content nav ul li:nth-of-type(2):before{
+	border-right-color: #dda972;
+}
+section article .content table{
+	font-size: 14px;
+	border-collapse: collapse;
+}
+section article .content table thead tr th{
+	line-height: 58px;
+	font-size: 16px;
+}
+section article .content .left{
+	margin-left: 66px;
+}
+section article .content .left tr,section article .content .left{
+	width: 716px;
+	display: inline-block;
+}
+section article .content .left tbody tr{
+	padding: 5px 0;
+	margin-bottom: 6px;
+	background-color: #fff;
+	box-sizing: border-box;
+	border: 1px solid #d9d9d9;
+}
+section article .content .left tbody tr:nth-of-type(5n-4){
+	border-left: 4px solid #26a8e2;
+}
+section article .content .left tbody tr:nth-of-type(5n-3){
+	border-left: 4px solid #f2ae43;
+}
+section article .content .left tbody tr:nth-of-type(5n-2){
+	border-left: 4px solid #fa4849;
+}
+section article .content .left tbody tr:nth-of-type(5n-1){
+	border-left: 4px solid #28b779;
+}
+section article .content .left tbody tr:nth-of-type(5n){
+	border-left: 4px solid #c126e2;
+}
+section article .content .left tbody tr td{
+	border-left: 1px solid #d9d9d9;
+	background-color: #fff;
+	line-height: 28px;
+	box-sizing: border-box;
+}
+section article .content .left tbody tr td{
+	padding-left: 20px;
+}
+section article .content .left tbody tr td:nth-of-type(1),section article .content .left thead tr th:nth-of-type(1){
+	width: 50px;
+	border-left: none;
+}
+section article .content .left tbody tr td:nth-of-type(2),section article .content .left thead tr th:nth-of-type(2){
+	width: 190px;
+}
+section article .content .left tbody tr td:nth-of-type(2){
+	color: #278ad6;
+}
+section article .content .left tbody tr td:nth-of-type(3),section article .content .left thead tr th:nth-of-type(3){
+	width: 200px;
+}
+section article .content .left tbody tr td:nth-of-type(4),section article .content .left thead tr th:nth-of-type(4){
+	width: 276px;
+}
+section article .content .right{
+	margin-left: 10px;
+}
+section article .content .right tr td button{
+	width: 80px;
+	height: 40px;
+	display: block;
+	color: #fff;
+	line-height: 40px;
+	outline-style: none;
+	border: 0 none;
+	background-color: #278ad6;
+	padding-left: 38px;
+	background-image: url(../img/sprites.png);
+	background-repeat: no-repeat;
+	background-position: 11px -55px;
+	margin-bottom: 6px;
+	cursor: pointer;
+}

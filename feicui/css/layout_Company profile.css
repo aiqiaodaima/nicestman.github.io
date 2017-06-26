@@ -1,0 +1,178 @@
+﻿body{
+	font-family: Microsoft YaHei,sans-serif;
+}
+/**********************/
+/*网页头部*/
+header,section{
+	width: 1200px;
+	margin: 0 auto;
+}
+header{
+	height: 80px;
+	padding: 10px 0;
+	box-sizing: border-box;
+}
+header .logo,header nav ul li{
+	float: left;
+}
+header .logo img{
+	width: 211px;
+	height: 60px;
+}
+header nav{
+	float: right;
+	width: 604px;
+	height: 60px;
+	padding: 21px 0;
+	box-sizing: border-box;
+}
+header nav ul li a{
+	display: block;
+	width: 120px;
+	height: 18px;
+	color: #404040;
+	text-align: center;
+	line-height: 18px;
+	font-weight: bold;
+	border-left: 1px solid #404040;
+}
+header nav ul li:nth-of-type(1) a{
+	border-left: none;
+}
+header nav ul li a:hover{
+	color: #448aca;
+}
+/*********************************/
+/*网页主体*/
+section{
+	width: 1200px;
+	margin: 0 auto;
+}
+section article .background{
+	height: 11px;
+	background-image: url(../img/beijing.png);
+	background-repeat: repeat-x;
+}
+section .content_head  .top{
+	height: 122px;
+	line-height: 122px;
+}
+section .content_head .top h1{	
+	float: left;
+	font-size: 24px;
+}
+section .content_head .top dl{
+	float: right;
+}
+section .content_head .top dl dt,section .content_head .top dl dd{
+	float: left;
+	line-height: 146px;
+}
+
+section .content_head .bottom{
+	padding-top: 35px;
+	box-sizing: border-box;
+}
+section .content_head .bottom  li{
+	float: left;
+	box-shadow: 0 0 4px 4px #e8e8e8;
+	padding: 8px 30px;
+	box-sizing: border-box;
+}
+section .content_head .bottom  li:nth-of-type(1),section .content_head .bottom  li:nth-of-type(2){
+	margin-bottom: 35px;
+}
+section .content_head .bottom  li:nth-of-type(2n+1){
+	margin-right: 35px;
+}
+section .content_head .bottom  li:nth-of-type(1){
+	width: 800px;
+	height: 200px;
+}
+section .content_head .bottom  li:nth-of-type(2){
+	width: 365px;
+	height: 200px;
+}
+section .content_head .bottom  li:nth-of-type(3){
+	width: 560px;
+	height: 200px;
+}
+section .content_head .bottom  li:nth-of-type(4){
+	width: 605px;
+	height: 200px;
+}
+section .content_head .bottom  li h2{
+	color: #006933;
+	font-size: 18px;
+	line-height: 59px;
+}
+section .content_head .bottom  li h2 i{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-color: #006933;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+section .content_head .bottom  li p{
+	color: #4b4b4b;
+	font-size: 12px;
+	text-indent: 24px;
+	line-height: 30px;
+}
+section .content_foot  .top{
+	height: 119px;
+	font-size: 24px;
+	line-height: 119px;
+}
+section .content_foot  .bottom{
+	padding: 15px 30px;
+	box-sizing: border-box;
+}
+section .content_foot  .bottom  h2{
+	color: #448aca;
+	font-size: 16px;
+	padding: 15px 0;
+}
+section .content_foot  .bottom  p{
+	height: 32px;
+	color: #333;
+	font-size: 12px;
+	line-height: 32px;
+	padding: 15px 0;
+}
+section .content_foot  .bottom i{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	margin-right: 10px;
+	background-image: url(../img/sprites.png);
+}
+section .content_foot  .bottom  p:nth-of-type(1) i{
+	background-position: 0 0;
+}
+section .content_foot  .bottom  p:nth-of-type(2) i{
+	background-position: 0 -32px;
+}
+section .content_foot  .bottom  p:nth-of-type(3) i{
+	background-position: 0 -64px;
+}
+section .content_foot  .bottom  p:nth-of-type(4) i{
+	background-position: 0 -96px;
+}
+/*********************************/
+/*网页底部*/
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: #333;
+	padding-top: 26px;
+	box-sizing: border-box;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+}
+footer p span{
+	margin-left: 24px;
+}

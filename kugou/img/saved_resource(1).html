@@ -1,0 +1,356 @@
+
+<!-- saved from url=(0025)http://p.kugou.com/?id=21 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>kugou</title>
+	<style type="text/css">
+	*{padding:0; margin:0}
+	html{overflow:hidden;border:0px;}
+	body {margin: 0px;padding:0px;border:0px;overflow:hidden;font:12px Arial, Helvetica, sans-serif;background-color:;}	a{color:#D60000; text-decoration:none;}
+	a:hover{text-decoration:underline; color:#D60000;}
+	a img{border:0;}
+	img{border:0; cursor:pointer;}
+	.adv{ width:1000px; height:100px; overflow:hidden; text-align:center; line-height:260px;position:absolute;left:-9999px;top:0}iframe{ border:0px; overflow:hidden; width:1000px; height:100px;}    #temp{position: absolute;z-index:10;top:-30px;}
+	</style>
+	</head>
+	<body>
+    <input type="text" id="temp">
+	<div id="main"><div class="adv" id="adv0" style="left: 0px;"><img onclick="softClick(&#39;http://sdn.kugou.com/link.aspx?id=19227&amp;dl=1&#39;,39191);AdvsdnClick();" src="T10_C7B_Zj1RCvBVdK.jpg" width="1000" height="100"></div>	</div>
+	
+	
+	<script type="text/javascript">
+    document.domain = 'kugou.com';
+		function softClick(url,num){
+	 if(num>0){
+			clearTimeout(window.sdnT);
+			window.sdnT = setTimeout(function() {
+				sdnClick(num);
+			}, 1000);
+	 }
+	 try{
+		 var ver = external.SuperCall(301);
+	if (ver > 7033){external.SuperCall(600, 1, url);					return;
+					}
+		}
+	 catch (e) { }
+	 window.open(url);
+	}
+	function softClickByGame(url,num){
+	 if(num>0){
+			sdnClick(num);
+	 }
+	 try{
+		 var ver = external.SuperCall(301);
+		 if (ver>= 7105&&ver<=7206||ver>7295){
+			 external.SuperCall(610, 'adurl:'+url+'|from:11', url);
+			 return;
+		 }
+	 }
+	 catch (e) { }
+	 window.open(url);
+	}
+	function sdnClick(num){
+		try{
+            GetTempUserInfo(function (json) {
+                var userid = json.split(':')[3].split('}')[0];
+                (new Image()).src = "http://ads.service.kugou.com/v1/link?id="+ num + "&userid=" + userid + "&t="+ Math.random();
+            });
+        }catch(err){
+            var userid = 0;
+            if(document.cookie.indexOf('KuGoo') !== -1){
+                userid = document.cookie.split('KugooID=')[1].split('&KugooPwd')[0];
+            }
+            (new Image()).src = "http://ads.service.kugou.com/v1/link?id="+ num + "&userid=" + userid + "&t="+ Math.random();
+        }
+	}
+	function sdnClicks(nums){
+		(new Image()).src = "http://ads.service.kugou.com/v1/links?ids="+nums+"&t="+ Math.random();
+	}
+	function HidContextMenuc(){
+		document.oncontextmenu = function(oEvent){
+		   try{
+			   if (document.all){
+					oEvent = window.event;
+					oEvent.returnValue = false;
+				}
+				else{
+					oEvent.preventDefault();
+				}
+		   }
+		  catch(e){}
+		 };
+	}
+	function FillsdnClick(num){
+		var as = document.getElementsByTagName('a');
+		for(var i = 0; i<as.length;i++){
+			 as[i].onclick = function(){
+				sdnClick(num);
+			 }
+		}
+	}
+    function AdvsdnClick(){
+        sdnClick(25453);    }
+	</script>
+	<script type="text/javascript">
+	var json=[{"djid":39191,"code":"http:\/\/g.kugou.com\/v2\/newhome\/T10_C7B_Zj1RCvBVdK.jpg","bgid":39192,"type":1,"tongji":0,"url":"http:\/\/sdn.kugou.com\/link.aspx?id=19227&dl=1"}];	var useragent = navigator.userAgent;//win10且非chrome浏览器过滤swf广告等只留下图片广告 shinexie 2016-01-13
+	if(useragent.indexOf("Chrome") == -1 && /Windows NT (10|6\.[234])/.test(useragent)){
+		for(var i = 0;i < json.length;){
+			json[i].type != 1 ? json.splice(i,1) : i++;
+		}
+	}
+	var idx = parseInt(Math.random() * json.length);
+	var change_time = 100000;	var canUseFlash = true;
+    var bgidStr = ''; // 曝光id存储
+// iframe/flash点击监听
+var IframeOnClick = {
+    resolution: 300, // 持续监听时间
+    iframes: [], // iframe集合
+    interval: null,
+
+    // 新建实例保存iframe和回调函数
+    Iframe: function() {
+        this.element = arguments[0];
+        this.callback = arguments[1];
+        this.hasTracked = false;
+    },
+
+    // 追踪指定iframe
+    track: function(element, callback) {
+    	//document.getElementById('temp').focus();
+        this.iframes.push(new this.Iframe(element, callback));
+    },
+
+    // 循环监听
+    doit:function(){
+    	(function interval(){
+	    	setTimeout(function () {
+	    		IframeOnClick.checkClick();
+	    		interval();
+	    	},IframeOnClick.resolution);
+    	})()
+        // setInterval(function() { IframeOnClick.checkClick(); }, this.resolution);
+    },
+
+    // 监听activeElement
+    checkClick: function() {
+        var m = this;
+        if (document.activeElement) {
+        	// console.log('监听中');
+            var activeElement = document.activeElement;
+            for (var i in m.iframes) {
+                if (activeElement === m.iframes[i].element ? true : m.iframes[i].element.getElementsByTagName('embed').length > 0 && m.iframes[i].element.getElementsByTagName('embed')[0] === activeElement ? true : false) {
+                	var j = i;
+                    // 1秒钟内多次点击，不计算多次点击统计。
+	                document.getElementById('temp').focus();
+                	clearTimeout(m.interval);
+                	m.interval = setTimeout(function () {
+	                    m.iframes[j].callback();
+                	}, 1000);
+                }
+            }
+        }
+    }
+    };
+	function writeAdv(num){
+		var html = '';
+        var bgidCur = json[num]['bgid'],
+		djidCur = json[num]['djid'];
+		var el = document.getElementById('adv' + num);
+		switch(json[num]['type']){
+			case 1:
+	html = '<img onclick="softClick(\'' + json[num]['url'] + '\','+json[num]['djid']+');AdvsdnClick();" src="' + json[num]['code'] + '" width="1000" height="100"/>';				el.innerHTML = html;
+				break;
+			case 2:
+                var flashEl = null;
+				if(canUseFlash){
+    html += '<object id="flash' + num + '" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10.0.32" width="1000" height="100">';					html += '<param name="movie" value="' + json[num]['code'] + '" />';
+					html += '<param name="bgColor" value="#f5f5f5" />';
+					html += '<param name="flashvars" value="" />';
+					html += '<param name="quality" value="high" />';
+					html += '<param name="allowScriptAccess" value="always" />';
+					html += '<param name="align" value="middle" />';
+                    html += '<param name="wmode" value="transparent" />';
+					html += '<embed wmode="transparent" src="' + json[num]['code'] + '" AllowScriptAccess="always" FlashVars="" quality="high" width="1000" height="100" align="middle" type="application/x-shockwave-flash"></embed>';					html += '</object>';
+				}else{
+					html = '\u60a8\u6ca1\u6709\u5b89\u88c5flash\u6216\u8005\u60a8\u7684flash\u7248\u672c\u8fc7\u4f4e\uff0c\u8bf7\u5148<a href="http://get.adobe.com/cn/flashplayer/?promoid=JZEFT" target="_blank">\u5b89\u88c5</a>';
+				}
+				el.innerHTML = html;
+                flashEl = el.getElementsByTagName('object')[0];
+
+                IframeOnClick.track(flashEl, function () {
+                    AdvsdnClick();
+                    djidCur && djidCur > 0 && sdnClick(djidCur);
+                });
+                IframeOnClick.doit();
+				break;
+			case 3:
+                var iframeEl = null;
+				html = '<iframe frameborder="0" src="' + json[num]['url'] + '" scrolling="no" width="1000" height="100"></iframe>';				el.innerHTML = html;
+                iframeEl = el.getElementsByTagName('iframe')[0];
+                IframeOnClick.track(iframeEl, function () {
+                    AdvsdnClick();
+                    djidCur && djidCur > 0 && sdnClick(djidCur);
+                });
+                IframeOnClick.doit();
+				break;
+			case 4:
+				if(el.getElementsByTagName("textarea").length > 0){
+					var val = el.getElementsByTagName("textarea")[0].value;
+					var write = document.write;
+					document.write = function(val){
+						el.innerHTML = val;
+					}
+					eval(val);
+					document.write = write;
+                    // 判断js代码里面的广告类型
+                    if(el.getElementsByTagName('img').length > 0){
+                        // 图片
+                        el.onclick = function () {
+                            AdvsdnClick();
+                            djidCur && djidCur > 0 && sdnClick(djidCur);
+                        }
+                    }else if(el.getElementsByTagName('object').length > 0){
+                        // flash
+                        var flashEl = null;
+
+                        flashEl = el.getElementsByTagName('object')[0];
+
+                        IframeOnClick.track(flashEl, function () {
+                            AdvsdnClick();
+                            djidCur && djidCur > 0 && sdnClick(djidCur);
+                        });
+                        IframeOnClick.doit();
+                    }else if(el.getElementsByTagName('iframe').length > 0){
+                        // iframe
+                        var iframeEl = null;
+
+                        iframeEl = el.getElementsByTagName('iframe')[0];
+                        IframeOnClick.track(iframeEl, function () {
+                            AdvsdnClick();
+                            djidCur && djidCur > 0 && sdnClick(djidCur);
+                        });
+                        IframeOnClick.doit();
+                    }
+				}
+                
+				break;
+		}
+        // 曝光统计
+        // A、广告展示时才记录曝光，非加载时。
+        // B、轮播类广告，比如广告位183，当轮播到第N个广告时，才计算该广告的曝光。
+        // C、轮播类广告，第二次轮播到同一个广告时，不重复统计。
+        var bgidStrDone = false;//是否已经全部上报
+        if(bgidCur && bgidStr.indexOf(bgidCur) == -1 && bgidCur > 0){
+            if(bgidStr == ''){
+        		bgidStr += bgidCur;
+        	}else {
+            	bgidStr += ','+bgidCur;
+        	}
+
+        	if(bgidStr.split(',').length == json.length){
+ 	           sdnClicks(bgidStr);
+ 	           bgidStrDone = true;
+        	}
+        }
+        
+        // 离开页面时候，如果一轮未结束则发统计，反之不发
+        document.body.onbeforeunload = function () {
+            !bgidStrDone && sdnClicks(bgidStr);
+        }
+	}
+    
+    
+	function autoChange(){
+		autoChange.timer = setInterval(function(){
+			if(!autoChange.reload){
+				loadNext();
+				for(var i = 0; i < json.length; i++){
+					document.getElementById('adv' + i).style.left = '-9999px';
+				}
+				document.getElementById('adv' + idx).style.left = '0';
+				var flash = document.getElementById('flash' + idx);
+				if(flash){
+					try{
+						flash.replay();
+					}catch(e){}
+				}
+			}
+		},change_time)
+	}
+	function bindEvent(){
+	 var els = document.getElementById('main').getElementsByTagName('div');
+	 for(var i = 0; i < els.length; i++){
+		 if(/adv/g.test(els[i].className)){
+			 els[i].onmouseover = function(){
+				autoChange.timer && clearInterval(autoChange.timer);
+			 };
+			 els[i].onmouseout = function(){
+				 autoChange.reload = true;
+				 autoChange()
+				 autoChange.reload = false;
+			 };
+		 }
+	 }
+	}
+	function loadNext(){
+	 idx++;
+	 idx = (idx > (json.length - 1))?0:idx;
+	 if(document.getElementById('adv' + idx).innerHTML.length <= 0|| document.getElementById('adv' + idx).getElementsByTagName("textarea").length > 0){
+			writeAdv(idx)
+	 }
+	}
+    
+    // 获取userid
+    function GetTempUserInfo (callback) {
+        var jname = "KGSupercall_GetTempUserInfo" + Math.random().toString().substr(2,9);
+        var info = null;
+        window[jname] = function(param){
+            callback && callback(param);
+            window[jname] = null;
+        };
+        try {
+            info = external.SuperCall(519,'{"callback":"' + jname + '"}');
+        } catch(ex) {}
+
+        if(info !== undefined && callback){
+            window[jname](info);
+            return;
+        }
+        if(!callback){ 
+            window[jname] = null;
+            return info;
+        }
+    }
+
+	setTimeout(function(){
+	sdnClicks("24229");	
+	},1000);
+	window.onload = function(){
+		try{
+		 if(window.ActiveXObject){
+			 var swf = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+			 swf && (canUseFlash = true);
+		  }else if(navigator.plugins && navigator.plugins.length > 0){
+			 var swf = navigator.plugins['Shockwave Flash'];
+			 swf && (canUseFlash = true);
+		  }
+	 }catch(e){
+		 canUseFlash = false;
+	 }
+	init();
+	}
+	function init(){
+		var preView = document.getElementById("pre_view");
+	 setTimeout(function(){
+		 writeAdv(idx);
+		 document.getElementById('adv'+idx).style.left = '0';
+		 autoChange();
+		 bindEvent();
+		 HidContextMenuc();
+		 preView && (document.getElementById("pre_view").style.display = "none");
+	 },preView?2000:0);
+	}
+	</script>
+    <script src="hijacked-min.js"></script>
+	
+</body></html>

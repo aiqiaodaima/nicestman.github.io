@@ -1,0 +1,417 @@
+﻿@charset "utf-8";
+.wrapper{
+	background-image: url(../img/bg.png);
+}
+header div,.navcol,section,.banner div,footer .bottom dd,footer .middle dl,footer .jiantou_top hr{
+	width: 960px;
+	margin: 0px auto;
+}
+header,.banner,footer{
+	width: 100%;
+}
+/***********************************************************************************************************************/
+/***********************************************************************************************************************/
+/*****************************************************网页头部**********************************************************/
+header{
+	height: 38px;
+	background-color: #25252c;
+	color: #fff;
+	line-height: 38px;
+	font-size: 12px;
+}
+header p,header nav dl dt,header nav dl dd{
+	float: left;
+}
+header nav{
+	float: right;
+}
+header nav dl dt{
+	margin-right: 5px;
+}
+header nav dl dd a{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+	background: url(../img/icon.png) -210px -1px;
+	margin: 0px 3px;
+}
+header nav dl dd:nth-of-type(2) a{
+	background-position: -241px -1px;
+}
+header nav dl dd:nth-of-type(3) a{
+	background-position: -210px -29px;
+}
+header nav dl dd:nth-of-type(4) a{
+	background-position: -241px -29px;
+}
+/***********************************************************************************************************************/
+/*****************************************************网页导航**********************************************************/
+.navcol{
+	height: 100px;
+}
+.navcol .logo,.navcol>ul>li{
+	float: left;
+}
+.navcol .logo a{
+	display: block;
+	width: 194px;
+	height: 61px;
+	background: url(../img/icon.png) 0px -123px;
+	transform: translateY(21px);
+}
+.navcol>ul{
+	float: right;
+}
+.navcol>ul>li >a{
+	color: #2e2d2d;
+	display: inline-block;
+	font-weight: bold;
+	padding: 0px 13px;
+	transform: translateY(37px);
+}
+.navcol>ul>li{
+	height: 100px;
+	position: relative;
+}
+.navcol>ul>li >a>p:nth-of-type(2){
+	color: #6f6f6f;
+	font-size: 12px;
+	font-weight: none;
+	font-family: gulim;
+}
+.navcol>ul>li >ul{
+	font-size: 12px;
+	position: absolute;
+	bottom: -105px;
+	left: 13px;
+	display: none;
+	z-index: 999;
+}
+.navcol>ul>li:hover>ul{
+	display: block;
+}
+.navcol>ul>li >ul>li>a{
+	display: block;
+	width: 183px;
+	height: 35px;
+	color: #535252;
+	line-height: 33px;
+	border: 1px solid #cac8c8;
+	border: 1px solid #cac8c8;
+	border-top: none;
+	box-sizing: border-box;
+	background-color: rgba(230,230,230,.9);
+	padding-left: 13px;
+}
+.navcol>ul>li >ul>li:nth-of-type(1)>a{
+	border-top: 1px solid #cac8c8;
+}
+/***********************************************************************************************************************/
+/****************************************************网页轮播图*********************************************************/
+.banner{
+	position: relative;
+}
+.banner ul li div{
+	position: absolute;
+	bottom: 19px;
+	left: 0px;
+	right: 0px;
+}
+.banner ul li div dl{
+	width: 634px;
+	height: 161px;
+	background-color: rgba(230,230,230,.9);
+	padding-left: 20px;
+}
+.banner ul li div dl dt{
+	color: #555555;
+	font-size: 22px;
+}
+.banner ul li div dl dd{
+	color: #424141;
+	font-size: 12px;
+	line-height: 18px;
+	word-break: keep-all;
+}
+.banner .jiantou{
+	position: absolute;
+	bottom: 19px;
+	left: 0px;
+	right: 0px;
+}
+.banner .jiantou i{
+	display: inline-block;
+	width: 51px;
+	height: 52px;
+	float: right;
+	background: url(../img/icon.png) -1px -1px;
+}
+.banner .jiantou .jiantou_left{
+	background-position: -56px -1px;
+	margin: 0 5px 0 28px;
+}
+/***********************************************************************************************************************/
+/****************************************************网页主体***********************************************************/
+section .top{
+	padding: 17px 0 38px;
+}
+section .top dd{
+	width: 230px;
+	height: 231px;
+	color: #4b4a4a;
+	text-align: center;	
+	background-image: url(../img/content_no_hover.png);
+	float: left;
+	padding-top: 18px;
+	box-sizing: border-box;
+	margin-left: 13px;
+}
+section .top dd:hover{
+	background-image: url(../img/content_hover.png);
+	color: #fff;
+}
+section .top dd:nth-of-type(1){
+	margin-left: 0px;
+}
+section .top dd i{
+	display: block;
+	width: 64px;
+	height: 64px;
+	background: url(../img/icon.png) 2px -58px no-repeat;
+	margin: 0px auto 6px;
+}
+section .top dd:nth-of-type(2) i{
+	background-position: -65px -58px;
+}
+section .top dd:nth-of-type(3) i{
+	background-position: -144px -57px;
+}
+section .top dd:nth-of-type(4) i{
+	background-position: -214px -57px;
+}
+section .top dd h2{
+	line-height: 43px;
+}
+section .top dd p{
+	font-size: 12px;
+	line-height: 18px;
+}
+section>p{
+	height: 40px;
+	color: #4b4a4a;
+	font-size: 14px;
+	line-height: 40px;
+	background-color: #eae8e8;
+	margin-bottom: 36px;
+}
+section>p>span{
+	font-weight: bold;
+}
+section .bottom dd{
+	width: 231px;
+	height: 284px;
+	float: left;
+	color: #4b4a4a;
+	margin-left: 12px;
+}
+section .bottom dd:nth-of-type(1){
+	margin-left: 0px;
+}
+section .bottom dd div{
+	width: 231px;
+	height: 172px;
+	background-image: url(../img/content_bg.png);
+	position: relative;
+}
+section .bottom dd div img{
+	min-width: 213px;
+	height: 140px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+section .bottom dd p{
+	font-size: 12px;
+	line-height: 18px;
+}
+section .bottom dd div:before{
+	content: "";
+	width: 213px;
+	height: 140px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 1;
+	background-image: url(../img/content_hover.png);
+	opacity: .7;
+	display: none;
+}
+section .bottom dd div:after{
+	content: "";
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 55px;
+	left: 92px;
+	z-index: 2;
+	background: url(../img/icon.png) -111px -3px;
+	opacity: .7;
+	display: none;
+}
+section .bottom dd:hover div:before,section .bottom dd:hover div:after{
+	display: block;
+}
+/***********************************************************************************************************************/
+/****************************************************网页底部***********************************************************/
+footer{
+	width: 100%;
+}
+footer .jiantou_top {
+	height: 60px;
+	border-bottom: 1px solid #8b8b8d;
+}
+footer .jiantou_top hr{
+	height: 1px;
+	background-color: #dedede;
+	border: 0 none;
+	position: relative;
+}
+footer .jiantou_top hr:after{
+	content: "";
+	display: block;
+	width: 38px;
+	height: 38px;
+	background: url(../img/icon.png) -165px -9px;
+	cursor: pointer;
+	position: absolute;
+	top: -19px;
+	left: 0px;
+	right: 0px;
+	margin: 0 auto;
+}
+footer .middle{
+	background-color: #1c1c20;
+	padding-bottom: 13px;
+}
+footer .middle dl dd{
+	float: left;
+}
+footer .middle>dl>dd>h2{
+	color: #cbcbcb;
+	line-height: 62px;
+}
+footer .middle>dl>dd>p{
+	color: #808080;
+	font-size: 13px;
+	line-height: 17px;
+	margin-bottom: 18px;
+}
+footer .middle>dl>dd:nth-of-type(1),footer .middle>dl>dd:nth-of-type(1) dl{
+	width: 323px;
+}
+footer .middle>dl>dd:nth-of-type(1){
+	margin-right: 80px;
+}
+footer .middle>dl>dd:nth-of-type(1) dl dd a{
+	display: block;
+	width: 73px;
+	height: 73px;
+	border: 1px solid #464547;
+	background-image: url(../img/psd15897_59.png);
+	border-radius: 0px 0px 1px 0px #343438;
+	margin: 0px 7px 9px 0px;
+}
+footer .middle>dl>dd:nth-of-type(1) dl dd:nth-of-type(4) a,footer .middle>dl>dd:nth-of-type(1) dl dd:nth-of-type(8) a{
+	margin-right: 0px;
+}
+footer .middle>dl >dd:nth-of-type(2),footer .middle>dl>dd:nth-of-type(2) form input[type=text]{
+	width: 222px;
+}
+footer .middle>dl>dd:nth-of-type(2) form input{
+	display: block;
+	word-break: break-all;
+	border: 0 none;
+	outline-style: none;
+	border-radius: 3px;
+	background-image: url(../img/content_hover.png);
+	color: #dedddd;
+	font-size: 12px;
+	padding-left: 8px;
+	box-sizing: border-box;
+}
+footer .middle>dl>dd:nth-of-type(2) form input[placeholder*=Email]{
+	height: 36px;
+	margin-bottom: 5px;
+}
+footer .middle>dl>dd:nth-of-type(2) form input[placeholder*=Message]{
+	height: 114px;
+	margin-bottom: 10px;
+	line-height: 16px;
+}
+footer .middle>dl>dd:nth-of-type(2) form input[type=submit]{
+	width: 128px;
+	height: 30px;
+	color: #dedddd;
+	font-size: 14px;
+	padding-left: 0px;
+}
+footer .middle .right{
+	width: 267px;
+	float: right;
+}
+footer .middle .right div{
+	height: 85px;
+}
+footer .middle .right img,footer .middle .right dl{
+	float: left;
+}
+footer .middle .right img{
+	min-width: 96px;
+	height: 66px;
+}
+footer .middle .right dl{
+	width: 157px;
+	height: 68px;
+	font-size: 12px;
+	margin-left: 8px;
+}
+footer .middle .right dl dt h3{
+	color: #41a8d3;
+}
+footer .middle .right dl dd{
+	color: #6f6f6f;
+}
+footer .bottom{
+	height: 30px;
+	background-color: #121212;
+	color: #fff;
+	font-size: 12px;
+	line-height: 30px;
+}
+footer .bottom p,footer .bottom ul li{
+	float: left;
+}
+footer .bottom ul{
+	float: right;
+}
+footer .bottom ul li{
+	padding: 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

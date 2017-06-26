@@ -1,0 +1,421 @@
+@charset "utf-8";
+body,button,input,select,textarea{
+	font-family: sans-serif;
+	font-size: 14px;
+}
+header nav,section{
+	width: 1200px;
+	margin: 0 auto;
+}
+/***********************************************************************************************************************/
+/***********************************************************************************************************************/
+/*****************************************************网页头部**********************************************************/
+header{
+	width: 100%;
+	height: 48px;
+	background-color: #333;
+	border-bottom: 1px solid #ccc;
+}
+header nav ul:nth-of-type(1),header nav ul li{
+	float: left;
+}
+header nav ul:nth-of-type(2){
+	float: right;
+}
+header nav ul li a{
+	color: #fff;
+	font-size: 12px;
+	line-height: 48px;
+	padding: 0 10px;
+	border-left: 1px solid #ccc;
+}
+header nav ul li:nth-of-type(1) a,header nav ul:nth-of-type(2) li:nth-of-type(2) a{
+	border-left: none;
+}
+header nav ul li:nth-of-type(1) a{
+	color: #96ccff;
+	padding-left: 0;
+}
+header nav ul:nth-of-type(2) li:nth-of-type(1) a{
+	padding: 0 38px 0 7px;
+}
+header nav ul:nth-of-type(2) li i{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/sprites.png) 0 0;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+header nav ul li a:hover{
+	color: #96ccff;
+}
+header nav ul li:nth-of-type(1) a:hover{
+	color: #fff;
+}
+
+/************************************************************************************************************************/
+/************************************************************************************************************************/
+/*****************************************************网页主体***********************************************************/
+section aside,section article nav dl dd,section article ul li,section article .content #jibenxinxi .top dl dd:nth-of-type(1) p,section article .content #jibenxinxi .top dl dd:nth-of-type(1) .jindutiao{
+	float:left;
+}
+section article{
+	float: right;
+}
+section{	
+	padding-bottom: 140px;
+}
+/************************************************************************************************************************/
+/**************************************************网页主体-侧边栏*******************************************************/
+section aside{
+	width: 236px;
+	height: 860px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	background-color: #f0f0f0;
+}
+section aside div{
+	color: #1a1a1a;
+	line-height: 32px;
+	padding: 21px 0 41px 33px;
+	box-sizing: border-box;
+}
+section aside div a{	
+	display: block;
+	border: 3px solid #ccc;
+	margin: 0 0 10px 23px;
+}
+section aside div a,section aside div a img{
+	width: 118px;
+	height: 118px;
+	border-radius: 50%;
+}
+section aside div p:nth-of-type(2){
+	color: #278ad6;
+}
+section aside div p:nth-of-type(4){
+	margin-bottom: 12px;
+}
+section aside div button{
+	width: 140px;
+	height: 36px;
+	color: #fff;
+	background-color: #278ad6;
+	border: 0 none;
+	border-radius: 2px;
+	margin-left: 14px;
+	cursor: pointer;
+	outline-style: none;
+}
+section aside dl dd{
+	width: 200px;
+	height: 51px;
+	color: #252525;
+	line-height: 50px;
+	margin-left: 18px;
+	padding-left: 78px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #d9d9d9;
+	box-shadow: 0 1px 0 0 #fff;
+	background-image: url(../img/sprites.png);
+	background-repeat: no-repeat;
+}
+section aside dl dd:nth-of-type(1){
+	width: 237px;
+	margin-left: 0;
+	padding-left: 96px;
+	background-color: #fff;
+	background-position: 66px -292px;
+	box-shadow: 0 1px 1px 0 #cdcccc;
+	
+}
+section aside dl dd:nth-of-type(2){
+	background-position: 47px -375px;
+}
+section aside dl dd:nth-of-type(3){
+	background-position: 46px -475px;
+}
+section aside dl dd:nth-of-type(4){
+	background-position: 47px -575px;
+}
+/************************************************************************************************************************/
+/**************************************************网页主体-内容栏*******************************************************/
+section article{
+	width: 940px;
+	padding-top:20px;
+}
+section article nav{
+	height: 34px;
+	background-color: #278ad6;
+	line-height: 34px;
+	padding-left: 3px;
+}
+section article nav dl dd a{
+	display: block;
+	color: #fff;
+	padding: 0 7px 0 13px;
+}
+section article nav dl dd a:hover{
+	color: #96ccff;
+}
+section article nav dl dd a:after{
+	content: ">";
+	width: 6px;
+	display: inline-block;
+	color: #fff;
+	transform: translateX(9px);
+}
+section article nav dl dd:nth-of-type(3) a:after{
+	content: "";
+}
+section article .col ul li{
+	width: 220px;
+	height: 150px;
+	color: #fff;
+	font-size: 14px;
+	padding: 44px 0 0 83px;
+	box-sizing: border-box;
+	margin: 20px 0 32px 20px;
+	background-image: url(../img/sprites.png);
+	background-repeat: no-repeat;
+	position: relative;
+	cursor: pointer;
+}
+section article .col ul li:nth-of-type(1){
+	background-color: #fa4849;
+	margin-left: 0;
+	background-position: 22px -650px;
+}
+section article .col ul li:nth-of-type(2){
+	background-color: #fbbe7c;
+	background-position: 22px -800px;
+}
+section article .col ul li:nth-of-type(3){
+	background-color: #68cca1;
+	background-position: 22px -950px;
+}
+section article .col ul li:nth-of-type(4){
+	background-color: #d3a6ed;
+	background-position: 22px -1100px;
+}
+section article .col ul li h2{
+	font-size: 26px;
+}
+section article .col ul li i{
+	content: "";
+	display: block;
+	width: 0px;
+	height: 0px;
+	border-top: 12px solid #fa4849;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	position: absolute;
+	bottom: -12px;
+	left: 100px;
+}
+section article .col ul li:nth-of-type(2) i{
+	border-top-color: #fbbe7c;
+}
+section article .col ul li:nth-of-type(3) i{
+	border-top-color: #68cca1;
+}
+section article .col ul li:nth-of-type(4) i{
+	border-top-color: #d3a6ed;
+}
+section article .content #jibenxinxi .top,section article .content #jibenxinxi .bottom,section article .content #dengjiguize,section article .content .xiugaibangding{
+	background-color: #f5f5f5;
+}
+section article .content #dengjiguize,section article .content .xiugaibangding{
+	height: 687px;
+}
+/************************************************************************************************************************/
+/**********************************************网页主体-内容栏-基本信息**************************************************/
+/* section article .content #jibenxinxi{ */
+	/* display: none; */
+/* } */
+section article .content #jibenxinxi .top,section article .content #jibenxinxi .bottom{
+	height: 200px;
+	font-size: 16px;
+	background-color: #f5f5f5;
+}
+section article .content #jibenxinxi .top{
+	margin-bottom: 20px;
+}
+section article .content #jibenxinxi div dl dd,section article .content #jibenxinxi div dl dt{
+	padding-left: 51px;
+}
+section article .content #jibenxinxi div dl dt{
+	color: #1a1a1a;
+	font-size: 20px;
+	line-height: 60px;
+	background-image: url(../img/sprites.png);
+	background-repeat: no-repeat;
+}
+section article .content #jibenxinxi .top dl dt{
+	background-position: 20px -145px;
+}
+section article .content #jibenxinxi .bottom dl dt{
+	background-position: 20px -195px;
+}
+section article .content #jibenxinxi div dl dd{
+	color: #333;
+	line-height: 36px;
+}
+section article .content #jibenxinxi .top dl dd:nth-of-type(1) .jindutiao{
+	width: 440px;
+	height: 10px;
+	background-color: #c9c9c9;
+	border-radius: 5px;
+	margin: 13px 20px 0;
+}
+section article .content #jibenxinxi .top dl dd:nth-of-type(1) .dangqianjindu{
+	width: 200px;
+	height: 10px;
+	background-color: #278ad6;
+	border-radius: 5px;
+}
+section article .content #jibenxinxi .top dl dd:nth-of-type(1) .jindutiao span{
+	display: block;
+	width: 22px;
+	height: 14px;
+	color: #fff;
+	text-align: center;
+	font-size: 8px;
+	line-height: 14px;
+	background-color: #278ad6;
+	position: relative;
+	transform: translate(190px,-32px)
+}
+section article .content #jibenxinxi .top dl dd:nth-of-type(1) .jindutiao span:after{
+	content: "";
+	border-top: 4px solid #278ad6;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	position: absolute;
+	bottom: -3px;
+	left: 3px;
+	transform: rotate(146deg)
+}
+section article .content #jibenxinxi .top dl dd:nth-of-type(2) span,section article .content #jibenxinxi .top dl dd:nth-of-type(3) span{
+	color: #fa4849;
+	font-weight: bold;
+	margin: 0 10px;
+}
+section article .content #jibenxinxi .bottom button{
+	outline-style: none;
+	border: 0 none;
+	background-color: #f5f5f5;
+	color: #278ad6;
+	cursor: pointer;
+}
+/************************************************************************************************************************/
+/**********************************************网页主体-内容栏-等级规则**************************************************/
+section article .content #dengjiguize{
+	padding: 18px 0px 0px 30px;
+}
+section article .content #dengjiguize dl dt h2{
+	font-size: 16px;
+	line-height: 42px;
+}
+section article .content #dengjiguize .top dd,section article .content #dengjiguize .middle dd{
+	line-height: 18px;
+}
+section article .content #dengjiguize .bottom dd table{
+	width: 440px;
+	font-size: 12px;
+	border-collapse: collapse;
+	float: left;
+}
+section article .content #dengjiguize .bottom dd table thead tr th{
+	line-height: 36px;
+	background-color: #f3e4d5;
+}
+section article .content #dengjiguize .bottom dd table tbody tr td{
+	line-height: 30px;
+	text-align: center;
+}
+section article .content #dengjiguize .bottom dd table tbody tr td:nth-of-type(2){
+	text-align: left;
+	padding-left: 30px;
+	box-sizing: border-box;
+}
+section article .content #dengjiguize .bottom dd table tbody tr td i{
+	display: inline-block;
+	width: 15px;
+	height: 16px;
+	background-image: url(../img/sprites.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+section article .content #dengjiguize .bottom dd .left tbody tr td i,section article .content #dengjiguize .bottom dd .right tbody tr td i{
+	background-position: 0px -1258px;
+}
+section article .content #dengjiguize .bottom dd .left tbody tr:nth-of-type(n+4) td i:nth-of-type(1),
+section article .content #dengjiguize .bottom dd .left tbody tr:nth-of-type(n+8) td i:nth-of-type(2),
+section article .content #dengjiguize .bottom dd .left tbody tr:nth-of-type(12) td i,
+section article .content #dengjiguize .bottom dd .right tbody tr td i:nth-of-type(1),
+section article .content #dengjiguize .bottom dd .right tbody tr td i:nth-of-type(2),
+section article .content #dengjiguize .bottom dd .right tbody tr td i:nth-of-type(3),
+section article .content #dengjiguize .bottom dd .right tbody tr:nth-of-type(n+4) td i:nth-of-type(4){
+	background-position: 0px -1288px;
+}
+section article .content #dengjiguize .bottom dd .right tbody tr:nth-of-type(n+8) td i,
+section article .content #dengjiguize .bottom dd .right tbody tr:nth-of-type(n+8) td i:nth-of-type(4){
+	background-position: 0px -1321px;
+}
+/************************************************************************************************************************/
+/**********************************************网页主体-内容栏-修改密码**************************************************/
+/**********************************************网页主体-内容栏-绑定手机**************************************************/
+section article .content .xiugaibangding{
+	padding-top: 45px;
+	font-size: 16px;
+}
+section article .content .xiugaibangding form{
+	width: 398px;
+	margin: 0px auto;
+}
+section article .content .xiugaibangding form label{
+	text-align: right;
+	width: 92px;
+	display: inline-block;
+}
+section article .content .xiugaibangding form input{
+	width: 300px;
+	height: 36px;
+	padding-left: 5px;
+	margin-bottom: 8px;
+	box-sizing: border-box;
+}
+section article .content .xiugaibangding form input[type=submit],section article .content #bangdingshouji form input[type=button]{
+	cursor: pointer;
+	outline-style: none;
+}
+section article .content .xiugaibangding form input[type=submit]{
+	width: 160px;
+	height: 40px;
+	color: #fff;
+	background-color: #28b779;
+	padding: 0px;
+	margin: 24px 0px 0px 97px;
+	border: 0px none;
+	border-radius: 2px;
+}
+/**********************************************网页主体-内容栏-绑定手机**************************************************/
+section article .content #bangdingshouji form input[type=submit]{
+	background-color: #278ad6;
+}
+section article .content #bangdingshouji form input[id=yzm]{
+	width: 156px;
+	height: 38px;
+}
+section article .content #bangdingshouji form input[type=button]{
+	width: 130px;
+	height: 38px;
+	color: #fff;
+	background-color: #278ad6;
+	padding: 0px;
+	margin-left: 10px;
+	border: 0px none;
+	border-radius: 2px;
+}

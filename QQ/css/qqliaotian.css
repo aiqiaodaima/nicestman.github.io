@@ -1,0 +1,123 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #eee;
+}
+dl{
+	width: 245px;
+	height: 525px;
+	border: 2px solid #fcc919;
+	background-color: #fff;
+	border-radius: 22px;
+	margin: 50px auto 0px;
+	box-shadow: 2px 2px 1px #9b9b9b;
+}
+dd:nth-of-type(1){
+	width: 9px;
+	height: 9px;
+	background-color: #666;
+	border-radius: 50%;
+	margin: 21px auto 8px;
+}
+dd:nth-of-type(2){
+	width: 48px;
+	height: 5px;
+	background-color: #666;
+	border-radius: 2px;
+	margin: 0px auto 22px;
+}
+dd:nth-of-type(2):before{
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-color: #666;
+	border-radius: 50%;
+	transform: translate(-18px,-1px);
+}
+dd:nth-of-type(3){
+	width: 223px;
+	height: 396px;
+	border: 1px solid #999;
+	margin: 0px auto;
+}
+dd:nth-of-type(3)>img{
+	display: block;
+	width: 223px;
+	height: 18px;
+}
+dd:nth-of-type(3) .content{
+	width: 223px;
+	height: 312px;
+	overflow-y: auto;
+}
+.kj:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.kj{
+	*zoom: 1;
+}
+.kj{
+	margin-top: 15px;
+}
+.kj p{
+	line-height: 20px;
+	max-width: 60%;
+	min-height: 16px;
+	word-break: break-all;
+	padding: 3px 5px;
+	background-color: #ccc;
+	border-radius: 3px;
+}
+.kj:last-child{
+	margin-bottom: 15px;
+}
+.kj span{
+	width: 82%;
+}
+.kj img{
+	width: 24px;
+	height: 24px;
+	display: block;
+	margin: 5px 5px 10px;
+}
+dd:nth-of-type(3) .czk{
+	width: 223px;
+	height: 66px;
+	color: #666;
+	font-size: 14px;
+	text-align: center;
+	background-color: #eee;
+	padding-top: 10px;
+	box-sizing: border-box;
+}
+dd:nth-of-type(3) .czk input[type = text],dd:nth-of-type(3) .czk input[type = button],
+dd:nth-of-type(3) .czk img{
+	vertical-align: middle;
+}
+dd:nth-of-type(3) .czk input[type = button],dd:nth-of-type(3) .czk img{
+	cursor: pointer;
+}
+dd:nth-of-type(3) .czk input[type = text]{
+	width: 137px;
+	height: 17px;
+	outline-style: none;
+}
+dd:nth-of-type(3) .czk input[type = button]{
+	width: 28px;
+	font-size: 12px;
+}
+dd:nth-of-type(4){
+	width: 39px;
+	height: 39px;
+	background-image: radial-gradient(#eee,#fff);
+	border: 2px solid #fefa74;
+	border-radius: 50%;
+	margin: 9px auto 0px;
+}

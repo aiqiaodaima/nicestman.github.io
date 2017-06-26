@@ -1,0 +1,431 @@
+@charset utf-8;
+body{
+	font-family: sans-serif;
+}
+header .top,header .bottom nav,section,footer article{
+	width: 1000px;
+	margin: 0 auto;
+}
+/*****************************/
+/*网页头部*/
+header {
+	height: 134px;
+}
+header .top .logo,header .top ul li,header .bottom nav .left,header .bottom nav ul li{
+	float: left;
+}
+header .top ul,header .bottom nav .right{
+	float: right;
+}
+/* header .top{ */
+	/* height: 78px; */
+/* } */
+header .top .logo{
+	width: 153px;
+	height: 37px;
+	padding-top: 21px;
+}
+header .top ul li a{
+	color: #777;
+	line-height: 78px;
+	font-size: 13px;
+	margin-left: 30px;
+}
+header .top ul li a:hover{
+	color: #009af3;
+}
+header .bottom{
+	background-color: #333;
+}
+header .bottom nav .left li a{
+	color: #ddd;
+	display: block;
+	padding: 16px 30px;
+}
+header .bottom nav .left li:nth-of-type(4) a:after{
+	content: ">";
+	display: inline-block;
+	font-size: 13px;
+	transform: rotate(90deg) translateY(-5px);
+}
+header .bottom nav .left li a:hover{
+	background-color: #0c8ed9;
+	color: #fff;
+}
+header .bottom nav .right li{
+	padding: 16px 0 0 30px;
+}
+header .bottom nav .right li a{
+	padding-left: 20px;
+	color: #bbb;
+	font-size: 13px;
+	background: url(../img/bjt.png) no-repeat;
+}
+header .bottom nav .right li:nth-of-type(2) a{
+	background-position: 0 -12px;
+}
+header .bottom nav .right li:nth-of-type(3) a{
+	background-position: 0 -36px;
+}
+header .bottom nav .right li a:hover{
+	color: #0c8ed9;
+}
+/*****************************/
+/*网页轮播图*/
+.banner{
+	position: relative;
+}
+.banner nav{
+	width: 100%;
+	background-color: rgba(0,0,0,.3);
+	position: absolute;
+	bottom: 0;
+}
+.banner nav ul{
+	width: 672px;
+	height: 60px;
+	padding-top: 15px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.banner nav ul li{
+	float: left;
+}
+.banner nav ul li a{
+	display: block;
+	height: 30px;
+	color: #fff;
+	line-height: 30px;
+	padding: 0 45px 0 30px;
+	margin-left: 55px;
+	background: url(../img/banner_icon.png) no-repeat;
+	border-right: 1px solid #ccc;
+}
+.banner nav ul li:nth-of-type(2) a{
+	background-position: 0 -30px;
+}
+.banner nav ul li:nth-of-type(3) a{
+	background-position: 0 -60px;
+	border-right: none;
+}
+/*****************************/
+/*网页主题内容*/
+section{
+	margin-bottom: 30px;
+}
+section article>dl>dt >a{
+	float:right;
+}
+section article h2{
+	height: 100px;
+	color: #555;
+	font-size: 30px;
+	font-weight: 300;
+	line-height: 100px;
+}
+section article h2 span{
+	color: #009af3;
+}
+section article dl dt  a{
+	color: #555;
+	line-height: 100px;
+}
+section article dl dt  a:hover{
+	color: #009af3;
+}
+/*精选歌单*/
+section .jxgd .left,section .jxgd .right,section .jxgd .bottom,section .jxgd .left dd,section article>dl>dt>h2,section .jxgd .right dd img,section .jxgd .right dd ol{
+	float: left;
+}
+section .jxgd .left{
+	width: 655px;
+}
+section .jxgd .left dd{
+	position: relative;
+	margin: 0 0 5px 5px;
+}
+section .jxgd .left dd:nth-of-type(1){
+	margin: 0;
+}
+section .jxgd .left dd:nth-of-type(4),section .jxgd .left dd:nth-of-type(5){
+	margin-bottom: 0;
+}
+section .jxgd .left dd,section .jxgd .left dd a img{
+	width: 160px;
+	height: 160px;
+}
+section .jxgd .left dd:nth-of-type(1),section .jxgd .left dd:nth-of-type(1) a img{
+	width: 325px;
+	height: 325px;
+}
+section .jxgd .left dd a p{
+	color: #fff;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+}
+section .jxgd .left dd a .top{
+	display: inline-block;
+	text-align: right;
+	padding-left: 24px;
+	top: 0;
+	right: 0;
+	background: url(../img/erji.png) no-repeat 0 4px;
+}
+section .jxgd .left dd a .bottom{
+	width: 100%;
+	height: 50px;
+	padding: 4px;
+	box-sizing: border-box;
+	bottom: 0;
+}
+/*热门榜单*/
+section .jxgd .right{
+	width: 320px;
+	margin-left: 25px;
+}
+section .jxgd .right dd{
+	margin-bottom: 15px;
+}
+section .jxgd .right dd img{
+	width: 98px;
+	height: 98px;
+}
+section .jxgd .right dd ol{
+	padding: 13px 0;
+	box-sizing: border-box;
+	margin-left: 10px;
+}
+section .jxgd .right dd ol li{
+	list-style-position: inside;
+	width: 212px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/*新歌首发*/
+section .xgsf .left,section .xgsf .right,section .xgsf .bottom,section .xgsf .right dd,section .xgsf .left dt ul,section .xgsf .left dt ul li,section .xgsf .left dd ul li a .songNome{
+	float: left;
+}
+section .xgsf .left  ul li,section .xgsf .left .pages{
+	font-size: 14px;
+}
+section .xgsf .left{
+	width: 655px;
+}
+section .xgsf .left dt{
+	border-bottom: 1px solid #f0f0f0;
+	margin-bottom: 10px;
+}
+section .xgsf .left dt ul li{
+	line-height: 100px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+section .xgsf .left dt button{
+	border: 1px solid #dbdbdb;
+	border-radius: 2px;
+	padding: 5px 10px 5px 22px;
+	color: #555;
+	font-size: 13px;
+	background: 0 0;
+	float: right;
+	margin-top: 32px;
+}
+section .xgsf .left dd ul li{
+	height: 35px;
+	line-height: 35px;
+}
+section .xgsf .left dd ul li a{
+	display: block;
+	padding: 0 10px;
+	box-sizing: border-box;
+	text-align: right;
+}
+section article dt ul li:hover,section .xgsf .left dd ul li a:hover{
+	color: #009af3;
+}
+section .xgsf .left .pages{
+	line-height: 35px;
+	padding-left: 280px;
+}
+section .xgsf .left .pages a,section .xgsf .left .pages p{
+	float: left;
+}
+section .xgsf .left .pages p .currentPage:after{
+	content: "/";
+	display: inline-block;
+	margin-left: 5px;
+}
+section .xgsf .left .pages a:after{
+	content: "<";
+	display: inline-block;
+	margin: 0 5px;
+	font-size: 16px;
+}
+section .xgsf .left .pages .next:after{
+	content: ">";
+}
+/*推荐MV*/
+section .xgsf .right{
+	width: 320px;
+	margin-left: 25px;
+}
+section .xgsf .right dd:nth-of-type(1){
+	position: relative;
+	margin-bottom: 12px;
+}
+section .xgsf .right dd img{
+	width: 154px;
+	height: 84px;
+}
+section .xgsf .right dd:nth-of-type(1) img{
+	width: 320px;
+	height: 175px;
+}
+section .xgsf .right dd:nth-of-type(2) img{
+	margin-right: 12px;
+}
+section .xgsf .right dd div{
+	height: 43px;
+	color: #444;
+	font-size: 14px;
+	line-height: 19px;
+	padding-top: 5px;
+}
+section .xgsf .right dd div p:nth-of-type(2){
+	color: #888;
+}
+section .xgsf .right dd .col{
+	width: 100%;
+	height: 50px;
+	padding: 6px 8px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	bottom: 0;
+}
+section .xgsf .right dd .col p{
+	color: #fff;
+}
+/*热门电台*/
+section .rmdt .left,section .rmdt .right,section .rmdt .bottom,section .rmdt .left dd,section .rmdt .right dd,section .rmdt .right dt ul li,section .rmdt .right dd img{
+	float: left;
+}
+section .rmdt .left{
+	width: 650px;
+	font-size: 14px;
+}
+section .rmdt .left dd{
+	width: 100px;
+	height: 130px;
+	margin: 0 37px 25px 0;
+	text-align: center;
+}
+section .rmdt .left dd:nth-of-type(5),section .rmdt .left dd:nth-of-type(10){
+	margin-right: 0;
+}
+section .rmdt .left dd a:hover{
+	color: #009af3;
+}
+/*热门歌手*/
+section .rmdt .right{
+	width: 325px;
+	font-size: 14px;
+	margin-left: 25px;
+}
+section .rmdt .right dt ul li{
+	line-height: 100px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+section .rmdt .right dd{
+	margin: 0 5px 5px 0;
+	position: relative;
+}
+section .rmdt .right dd:nth-of-type(2),section .rmdt .right dd:nth-of-type(5){
+	margin-right: 0;
+}
+section .rmdt .right dd img{
+	width: 105px;
+	height: 105px;
+}
+section .rmdt .right dd:nth-of-type(1) img,section .rmdt .right dd:nth-of-type(2) img{
+	width: 160px;
+	height: 160px;
+}
+section .rmdt .right dd p{
+	width: 100%;
+	color: #fff;
+	padding: 8px 5px;
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+}
+/*合作伙伴*/
+section .hzhb dd{
+	width: 130px;
+	height: 58px;
+	border: 1px dashed #ccc;
+	float: left;
+	margin: 0 12px 12px 0;
+}
+section .hzhb dd:nth-of-type(7),section .hzhb dd:nth-of-type(14),section .hzhb dd:nth-of-type(21){
+	margin-right: 0	
+}
+/*友情链接*/
+section .yqlj dd{
+	width: 125px;
+	height: 45px;
+	font-size: 13px;
+	line-height: 45px;
+	float: left;
+}
+section .yqlj dd a{
+	color: #555;
+}
+section .yqlj dd a:hover{
+	color: #009af3;
+}
+/*****************************/
+/*网页底部*/
+footer{
+	width: 100%;
+	color: #b1b3b9;
+	font-size: 13px;
+	background-color: #2c323b;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+}
+footer nav{
+	border-bottom: 1px solid #3d424a;
+	margin-bottom: 40px;
+}
+footer nav ul{
+	width: 855px;
+	line-height: 48px;
+	margin: 0 auto;
+}
+footer nav ul li{
+	float: left;
+}
+footer nav ul li a{
+	color: #b1b3b9;
+	padding: 0 16px;
+	border-left: 1px solid #b1b3b9;
+}
+footer nav ul li a:hover{
+	color: #009af3;
+}
+footer nav ul li:nth-of-type(1) a{
+	border: none;
+}
+footer article{
+	line-height: 30px;
+	text-align: center;
+}
+footer article p:nth-of-type(2) span{
+	margin-left: 16px;
+}
+footer article p:nth-of-type(3) span{
+	margin: 0 16px;
+}
